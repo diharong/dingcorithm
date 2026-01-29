@@ -1,21 +1,21 @@
 def find_max_num(array):
-    # 이 부분을 채워보세요!
-    # array.sort()
-    # return array[-1]
+    max_number = array[0]
+
     for number in array:
-        is_max_num = True
-        for compare_number in array:
-            if number < compare_number:
-                is_max_num = False
-        if is_max_num :
-            return number
+        if number > max_number:
+            max_number = number
+    return max_number
 
-
+# 1. 하나의 원소를 다른 원소들과 비교해서 최대값인지 분석하는 방법
 # 3 -> 5, 6, 1, 2, 4
 # 5 -> 6, 1, 2, 4
 # 6 -> 1, 2, 1
 # 1 -> 2, 4
 # 2 -> 4
+# 2. 하나의 변수를 잡아서 그 변수와 비교하며 가장 큰 수를 찾는 방법.
+
+# 3,5,6,1,2,4
+# max_num = 3 이라고 처음에 잡아놓고 비교해서 숫자를 바꾸는 방법
 
 print("정답 = 6 / 현재 풀이 값 = ", find_max_num([3, 5, 6, 1, 2, 4]))
 print("정답 = 6 / 현재 풀이 값 = ", find_max_num([6, 6, 6]))
